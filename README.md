@@ -1,4 +1,4 @@
-# README: Flask Web Application with Microsoft Entra ID Integration
+# Flask Web Application with Microsoft Entra ID Integration
 
 This project is a simplified version of the original [Microsoft Entra ID with a Python web application sample](https://github.com/Azure-Samples/ms-identity-python-webapp). It demonstrates how to integrate Microsoft Entra ID with a Python web application built using [Flask](https://flask.palletsprojects.com/en/3.0.x/). All configurations and features unrelated to Microsoft Entra ID have been removed to streamline the application.
 
@@ -21,11 +21,24 @@ This application supports the following scenarios:
 
 1. **Python**: Ensure you have [Python 3.8+](https://python.org) installed.
 2. **Clone the Repository**: Clone this repository or download the zip file.
-3. **Install Dependencies**:
+3. **Create a Virtual Environment**:
+   ```bash
+   python -m venv .venv
+   ```
+4. **Activate the Virtual Environment**:
+   - On **Windows**:
+     ```bash
+     .venv\Scripts\activate
+     ```
+   - On **macOS/Linux**:
+     ```bash
+     source .venv/bin/activate
+     ```
+5. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
-4. **Run the Application**:
+6. **Run the Application**:
    ```bash
    flask run -h localhost
    ```
@@ -81,25 +94,3 @@ To deploy this application to Azure App Service:
 1. Follow the [Quickstart: Deploy a Python web app to Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/quickstart-python), replacing the sample app with this project.
 2. Configure the app's settings in Azure to include the environment variables from your `.env` file.
 3. If `SESSION_TYPE = "filesystem"` is set in `app_config.py`, enable "session affinity" (ARR affinity) in the Azure App Service settings.
-
----
-
-## Building from Scratch
-
-If you'd like to build a similar project from scratch, refer to the [Flask instructions in the Microsoft Identity library documentation](https://identity-library.readthedocs.io/en/latest/flask.html). You can also review the source code of this project for additional implementation details.
-
----
-
-## Contributing
-
-If you encounter any issues or have suggestions for improvement, please open an issue on [GitHub](../../issues).
-
-For contributions, see the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
-
-This project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For questions or concerns, contact [opencode@microsoft.com](mailto:opencode@microsoft.com).
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
