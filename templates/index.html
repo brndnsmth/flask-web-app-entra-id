@@ -8,11 +8,17 @@
     <h1>{{ title }}</h1>
     <h2>Welcome {{ user.get("name") }}!</h2>
 
+    <p><strong>ID:</strong> {{ user.get("id") }}</p>
+    <p><strong>Display Name:</strong> {{ user.get("displayName", "Not Available") }}</p>
+    <p><strong>Mail:</strong> {{ user.get("mail", "Not Available") }}</p>
+    <p><strong>UPN:</strong> {{ user.get("userPrincipalName", "Not Available") }}</p>
+    <p><strong>Employee ID:</strong> {{ user.get("employeeId", "Not Available") }}</p>
+
     <!-- There is much hassle to get the local static image to show up on App Service.
     https://learn.microsoft.com/en-us/azure/app-service/configure-language-python#serve-static-files-for-django-apps
     For now, we will use a remote image.
     -->
-    <img src="https://github.com/Azure-Samples/ms-identity-python-webapp-django/raw/main/static/topology.png" alt="Topology">
+    <!-- <img src="https://github.com/Azure-Samples/ms-identity-python-webapp-django/raw/main/static/topology.png" alt="Topology"> -->
 
     <ul>
     {% if api_endpoint %}
