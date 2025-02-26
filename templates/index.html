@@ -6,10 +6,12 @@
 </head>
 <body>
     <h1>{{ title }}</h1>
-    <h2>Welcome {{ user.get("name") }}!</h2>
+    <h2>Welcome {{ user.get("displayName") }}!</h2>
 
     <p><strong>ID:</strong> {{ user.get("id") }}</p>
     <p><strong>Display Name:</strong> {{ user.get("displayName", "Not Available") }}</p>
+    <p><strong>First Name:</strong> {{ user.get("givenName", "Not Available") }}</p>
+    <p><strong>Last Name:</strong> {{ user.get("surname", "Not Available") }}</p>
     <p><strong>Mail:</strong> {{ user.get("mail", "Not Available") }}</p>
     <p><strong>UPN:</strong> {{ user.get("userPrincipalName", "Not Available") }}</p>
     <p><strong>Employee ID:</strong> {{ user.get("employeeId", "Not Available") }}</p>

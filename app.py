@@ -25,7 +25,7 @@ auth = Auth(
 )
 
 # Microsoft Graph API endpoint and scope
-GRAPH_API_URL = "https://graph.microsoft.com/v1.0/me?$select=displayName,mail,userPrincipalName,id,employeeId"
+GRAPH_API_URL = "https://graph.microsoft.com/v1.0/me?$select=displayName,givenName,surname,mail,userPrincipalName,id,employeeId"
 GRAPH_SCOPES = ["https://graph.microsoft.com/User.Read"]
 
 @app.route("/")
